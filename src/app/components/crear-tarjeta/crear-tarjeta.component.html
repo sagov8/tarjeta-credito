@@ -3,12 +3,13 @@
     <h5 class="text-center title">Crear Tarjeta</h5>
   </div>
   <div class="card-body">
-    <form>
+    <form [formGroup]="form" (ngSubmit)="crearTarjeta()">
       <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1">
-            <i class="fas fa-user-circle"></i>
+          <i class="fas fa-user-circle"></i>
         </span>
         <input
+          formControlName="titular"
           type="text"
           class="form-control"
           placeholder="Titular"
@@ -16,46 +17,48 @@
       </div>
       <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1">
-            <i class="fas fa-credit-card"></i>
+          <i class="fas fa-credit-card"></i>
         </span>
         <input
+          formControlName="numeroTarjeta"
           type="text"
           class="form-control"
           placeholder="No. Tarjeta"
         />
       </div>
       <div class="row">
-          <div class="col-lg-7">
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">
-                    <i class="fas fa-calendar-alt"></i>
-                </span>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="MM/YY"
-                />
-              </div>
+        <div class="col-lg-7">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">
+              <i class="fas fa-calendar-alt"></i>
+            </span>
+            <input
+              formControlName="expiracion"
+              type="text"
+              class="form-control"
+              placeholder="MM/YY"
+            />
           </div>
-          <div class="col-lg-5">
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">
-                    <i class="fas fa-key"></i>
-                </span>
-                <input
-                  type="password"
-                  class="form-control"
-                  placeholder="CVV"
-                />
-              </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">
+              <i class="fas fa-key"></i>
+            </span>
+            <input
+              formControlName="cvv"
+              type="password"
+              class="form-control"
+              placeholder="CVV"
+            />
           </div>
+        </div>
       </div>
       <div class="d-grid gap-2">
-        <button class="btn btn-success" type="button">
-            <i class="fas fa-database"></i>&nbsp; Aceptar
+        <button class="btn btn-success" type="submit">
+          <i class="fas fa-database"></i>&nbsp; Aceptar
         </button>
       </div>
     </form>
-    
   </div>
 </div>

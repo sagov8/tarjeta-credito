@@ -1,6 +1,10 @@
 <div class="card">
   <div class="card-header">
-    <h5 class="text-center title">Crear Tarjeta</h5>
+    <h5 class="text-center title">Crear Tarjeta
+      <div *ngIf="loading" class="spinner-border float-end" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </h5>
   </div>
   <div class="card-body">
     <form [formGroup]="form" (ngSubmit)="crearTarjeta()">

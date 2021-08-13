@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tarjetacredito-2e383": {
+      "hosting": {
+        "tarjetacredito": [
+          "tarjetacredito-2e383"
+        ]
+      }
+    }
+  }
+}

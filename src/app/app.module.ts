@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { CrearTarjetaComponent } from './components/crear-tarjeta/crear-tarjeta.component';
 import { ListarTarjetaComponent } from './components/listar-tarjeta/listar-tarjeta.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,17 +11,9 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Santiago Vivas</td>
-                <td>1234567812345678</td>
-                <td>
-                    <i class="far fa-edit text-info"></i>&nbsp;
-                    <i class="far fa-trash-alt text-danger"></i>
-                </td>
-            </tr>
-            <tr>
-                <td>Valentina Durán</td>
-                <td>9765432187654321</td>
+            <tr *ngFor="let tarjeta of listTarjetas">
+                <td>{{ tarjeta.titular }}</td>
+                <td>{{ tarjeta.numeroTarjeta }}</td>
                 <td>
                     <i class="far fa-edit text-info"></i>&nbsp;
                     <i class="far fa-trash-alt text-danger"></i>

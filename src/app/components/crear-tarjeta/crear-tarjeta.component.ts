@@ -54,6 +54,7 @@ export class CrearTarjetaComponent implements OnInit {
     this._tarjetaService.guardarTarjeta(TARJETA).then(()=>{
       console.log('tarjeta registrada');
       this.loading = false;
+      this.form.reset();
       this.toastr.success('La tarjeta ha sido agregada con éxito', 'Tarjeta registrada');
     }, error => {
       this.loading = false;

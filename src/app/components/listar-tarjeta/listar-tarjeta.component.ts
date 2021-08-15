@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { Observable } from 'rxjs';
 import { TarjetaCredito } from 'src/app/models/TarjetaCredito';
 import { TarjetaService } from 'src/app/services/tarjeta.service';
 
@@ -41,5 +42,11 @@ export class ListarTarjetaComponent implements OnInit {
       console.log(error);
     })
   }
+
+  editarTarjeta(tarjeta: TarjetaCredito){
+    this._tarjetaService.addTarjetaEdit(tarjeta);
+  }
+
+  
 
 }

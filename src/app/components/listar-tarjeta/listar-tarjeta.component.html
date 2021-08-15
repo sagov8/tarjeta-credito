@@ -15,7 +15,7 @@
                 <td>{{ tarjeta.titular }}</td>
                 <td>{{ tarjeta.numeroTarjeta }}</td>
                 <td>
-                    <i class="far fa-edit text-info"></i>&nbsp;
+                    <i (click)="editarTarjeta(tarjeta)" class="far fa-edit text-info"></i>&nbsp;
                     <i (click)="eliminarTarjeta(tarjeta.id)" class="far fa-trash-alt text-danger"></i>
                 </td>
             </tr>
